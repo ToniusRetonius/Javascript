@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+</head>
+<body>
+    <ul>
+        <li><a href="#inicio.htlm"></a>Inicio</li>
+        <li><a href="#contacto.html"></a>Contacto</li>
+        <li><a href="#tyc.html"></a>Terminos y Condiciones</li>
+    </ul>
+    <nav>
+<!-- Actualizo el estado de la pagina-->
+<!-- el GO() tiene un parametro llamado DELTA que puede ser positivo o negativo
+el negativo retrocede n-veces y el positivo avanza n-veces  -->
+        <button type="button" onclick="history.go()">Volver</button>
+<!-- voy para atras en el historial-->
+        <button type="button" onclick="history.back()">Volver</button>
+<!-- voy para adelante en el historial-->
+        <button type="button" onclick="history.forward()">Adelante</button>
+    </nav>
+</body>
+</html>

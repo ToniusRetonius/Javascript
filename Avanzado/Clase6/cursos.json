@@ -1,0 +1,15 @@
+[
+    {
+        "nombre" : "Dise;o UI",
+        "categoria" : "UX",
+        "archivos" : [
+            "Clase1.pdf",
+            "Clase2.pdf",
+            "Clase3.pdf"
+        ]
+    },
+    {
+        "nombre" : "JS Avanzado",
+        "categoria" : "JavaScript"
+    }
+]

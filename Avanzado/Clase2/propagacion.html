@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagacion</title>
+    <style>
+        body
+        {
+            height: 100vh;
+        }
+        body, body div
+        {
+            display: flex;
+            align-self: center;
+            justify-content: center;
+        }
+        body div
+        {
+            width: 50%;
+            height: 50%;
+        }
+        #uno{background-color: aqua;}
+        #dos{background-color: blueviolet;}
+        #tres{background-color: chartreuse;}
+
+
+    </style>
+</head>
+<body>
+
+    <div id="uno">
+        <div id="dos">
+            <div id="tres"></div>
+        </div>
+    </div>
+
+    <script>
+        document
+        .querySelectorAll('div')    // Selecciono elementos
+        .forEach(item => // Recorremos
+        {
+            item.addEventListener   // Escuchamos el evento
+            ('click',   // String del evento (nombre del evento)
+             e =>       // Funcion que se ejecutara
+             console.log
+             (e.target.id, 
+             e.currentTarget.id, 
+             e.stopPropagation())
+            )   
+        })
+    </script>
+</body>
+</html>

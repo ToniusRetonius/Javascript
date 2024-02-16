@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (document object model)</title>
+</head>
+<body>
+    <button id="contar-titulos">contar titulos</button>
+    <p id="contar-resultados"></p>
+    <script>
+        // BOM = window
+        // DOM = document
+        const titulo1 = document.createElement("h1");
+        const seccion = document.createElement("section");
+
+        section.appendChild(titulo1);
+        
+        document.body.appendChild(titulo1); 
+        document.body.appendChild(seccion);
+
+        console.log(seccion.innerHTML, seccion.innerText)
+
+
+        const generarSeccion = (titulo, texto) =>
+        {
+            //encabezado 
+            const titulo1 = document.createElement("h1");
+            titulo.innerHTML = titulo;
+
+            //contenido
+            const contenido = document.createElement('p');
+            contenido.innerHTML = texto;
+
+            //seccion
+            const seccion = document.createElement("section");
+            seccion.appendChild(titulo1);
+
+            return seccion;
+
+        }
+
+        for (let i = 0; i < 10; i++)
+        {
+            document.appendChild(generarSeccion('titulo ' + i, 'hooolaaaa'))
+        };
+
+        document.querySelector('#contar-titulos').onclick = function(){debugger}
+
+        document.querySelector('#contar-titulos').addEventListener('click', (event) => 
+        {
+            document.querySelectorAll('#contar-resultados').innerText= "Cantidad de titulos= " + document.querySelectorAll('section > h1')
+        })
+
+    </script>
+</body>
+</html>

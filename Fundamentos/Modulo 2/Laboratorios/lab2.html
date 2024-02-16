@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 2</title>
+</head>
+<body>
+    <script>
+        var 
+          numero1 = Number(prompt('Ingrese un numero'));
+          numero2 = Number(prompt('Ingrese otro numero'));
+          operacion = prompt('Ingrese la operacion');
+          resultado = false;
+          operacion = operacion.toLowerCase();
+
+          if (operacion === 'suma') {
+              resultado = numero1 + numero2;
+          } else if (operacion === 'resta'){
+              resultado = numero1 - numero2;
+          } else if (operacion === 'multiplicacion'){
+              resultado = numero1 * numero2;
+          } else if (operacion === 'division'){
+              resultado = numero1 / numero2;
+          }
+        
+        alert('Resultado: '+ resultado)
+
+
+    </script>
+</body>
+</html>

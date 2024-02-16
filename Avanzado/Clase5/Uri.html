@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URI - Uniform Resource ID</title>
+</head>
+<body>
+    <header>
+        <h1>identificador de recursos uniforme</h1>
+    </header>
+    <P>
+        [ESQUEMA] >>> 
+        :// [autoridad] 
+        / [path o ruta] 
+        /? [parametros]=[valor] 
+        # [hash o anclas]
+    </P>
+    <section>
+        <h1>Esquema</h1>
+         <ul>
+            <li>http/https</li>
+            <li>ftp</li>
+            <li>mailto</li>  // tipo mail
+            <li>tel</li>
+            <li>data</li>
+            <li>irc</li> // primer manera de chat en la web
+        </ul>
+        <p>Segun el esquema de la URI puede tener distinto formato </p>
+    </section>
+    <section>
+        <h2>Autoridad</h2>
+        <p>Segun el caso podemos tener tres partes o solo una o dos</p>
+        <li>
+            userinfo (opciones) <br>
+            usuario : clave @ <br>
+            usuario@
+        </li>
+        <li>
+            Anfitrion <br>
+            ip o dominio 
+        </li>
+        <li>
+            Puerto <br>
+            : 3000
+        </li>
+    </section>
+    <section>
+        <h2>Ruta</h2>
+        <p>Jerarquizar los recursos</p>
+        <li>
+            /curso <br>
+            /curso/alumnos
+        </li>
+    </section>
+    <section>
+        <h2>Query o Consulta</h2>
+        <p>Si necesitamos pasar parametros al servidor, usamos "clave = valor"</p>
+        <li>
+             ?[NombreParametro = valor]
+             ?[NombreParametro = valor & OtroParametro = valor & ... ]
+        </li>
+    </section>
+    <section id="Fragmento">
+        <h2>Fragmento  Hash o Ancla</h2>
+        <p>Contiene un ID de un elemento dentro del DOM</p>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - PROPIO</title>
+</head>
+<body>
+<form>
+    <table>
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Nombre</td>
+                <td>Aprobo</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button type="submit">Enviar</button>
+
+</form>
+<script>
+    const fragmento = document.createDocumentFragment();
+    fragmento.appendChild(document.createElement('tbody'))
+    const alumnos = 
+    [
+        {
+            nombre : 'Caro'
+        },
+        {
+            nombre : 'Tomi'
+        },
+        {
+            nombre : 'Jorge'
+        },
+        {
+            nombre : 'Dalila'
+        }
+    ]
+    alumno.forEach((alumno, indice) =>
+    {
+        const alumnoFila = document.createElement('tr');
+        alumnoFila.appendChild(document.createElement('td'));
+
+        //Nombre
+        const celdaNombre = document.createElement('td');
+        celdaNombre.innerHTML = 
+        `<b>
+            ${alumno.nombre}
+        </b>`;
+        alumnoFila.appendChild(celdaNombre);
+
+        //Agregamos un evento propio y escucharlo (input dinamico)
+
+        // Aprobo o no 
+
+        const aproboCelda = document.createElement('td');
+        const aproboLabel = document.createElement('label');
+        const aproboInput = document.createElement('input');
+        aproboInput.type = "Checkbox";
+        aproboInput.name = `Aprobado[${indice}]`;
+        aproboLabel.appendChild(aproboInput);
+        aproboCelda.appendChild(aproboLabel);
+        alumnoFila.appendChild(aproboCelda);
+
+        fragmento.appendChild(alumnoFila); 
+    })
+        document
+            .querySelector('table tbody')
+            .appendChild(fragmento);
+            
+        //Creo el evento
+        const aprobadosEvent = new Event("aprobados");
+        
+        // Escucha 
+        document
+            .querySelector('form')
+            .addEventListener('aprobados'),
+        (e)=> 
+        {
+            alert('Bueniisimo Todos aprobados');
+        }
+
+        document
+            .querySelector('form')
+            .addEventListener('submit'),
+        
+        (e)=> 
+        {
+            const alumnos = e.target.querySelectorAll('tbody > tr');
+            const aprobados = e.target.querySelectorAll('tbody > tr input');
+            //Ejecuto el evento cuando todos aprueben
+            if(alumnos.length === aprobados.length)
+            {
+                this.dispatchEvent(aprobadosEvent);
+            } 
+        }
+</script>
+</body>
+</html>
+

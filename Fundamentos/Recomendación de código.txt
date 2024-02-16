@@ -1,0 +1,20 @@
+e Pack for Visual Studio Code
+
+
+Theme: Material Theme (https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme)
+
+Color Theme: Atom One Dark (https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark)
+
+Icon Theme: VSCode Great Icons (https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
+
+
+=== Extensions ===
+Atom Keymap (si usaste Atom, con esto podés usar los mismos atajos de teclado)
+
+Color Highlight (Resalta el color HEX o RGB en tu CSS o HTML)
+
+EJS Language Support (Soporte para archivo EJS - Templates de Express)
+
+Beautify (Embellece el código HTML, CSS, y JS)
+
+Emmet (ya viene instalado - shortcuts para teclado - https://docs.emmet.io/cheat-sheet/)
